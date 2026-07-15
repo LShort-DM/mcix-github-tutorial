@@ -23,4 +23,19 @@ jobs:
       - name: Verify MCIX runtime
         uses: MettleCI/mcix-system-version@v0
 
+      - name: Deploy DataStage assets
+        id: deploy
+        uses: MettleCI/mcix-composite-deploy@v0
+        with:
+          api-key: ${{ secrets.CP4D_API_KEY }}
+          url: ${{ vars.CP4D_URL }}
+          user: ${{ vars.CP4D_USER }}
+          project: ${{ vars.DATASTAGE_PROJECT }}
+
+          assets: datastage
+          overlays: overlays/ci
+          output: build/ci-assets.zip
+
+          import-report: reports/import-report.xml
+          compile-report: reports/compile-report.xml
 
