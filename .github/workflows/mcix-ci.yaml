@@ -1,17 +1,26 @@
 name: MCIX CI Workflow
 
 on:
+  push:
+    branches:
+      - main
+
   workflow_dispatch:
 
 jobs:
-  mcix-system-version:
-    name: Verify MCIX runtime
+  deploy-ci:
+    name: Deploy to CI
     runs-on: ubuntu-latest
+    environment: ci
+
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository         
         uses: actions/checkout@v6
 
-      - name: Run MCIX System Version
-        uses: MettleCI/mcix-system-version@v1
+      - name: Verify MCIX runtime
+        uses: MettleCI/mcix-system-version@v0
+
 
