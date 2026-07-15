@@ -21,13 +21,14 @@
         },
         "schema_ref" : "8cae256d-17b9-4a27-98ef-ed88bfaaf81d",
         "parameters" : {
+          "outputName" : "sales_cust",
           "buf_mode" : "default"
         }
       } ],
       "op" : "PxJoin",
       "inputs" : [ {
         "links" : [ {
-          "node_id_ref" : "2d7f601c-2b07-46d1-97d4-0243c47a68a4",
+          "node_id_ref" : "7b29d47c-0828-4db9-88f5-6986e9b65980",
           "type_attr" : "PRIMARY",
           "id" : "2e97ceea-1584-4b0a-9688-0ec431c81a45",
           "app_data" : {
@@ -69,12 +70,11 @@
                 "position" : "middle",
                 "y_pos" : -20,
                 "height" : 20
-              } ],
-              "class_name" : "undefined"
+              } ]
             }
           },
           "link_name" : "stgSales",
-          "port_id_ref" : "3db049f3-fdb0-4225-81b4-771d3e6d2fae"
+          "port_id_ref" : "3c300bd5-5d86-48ee-a608-f58c9282800f"
         } ],
         "id" : "81a4eae1-ffcb-4e49-a78f-0e9ed555cb69",
         "app_data" : {
@@ -135,7 +135,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "undefined"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "stgCustomer",
@@ -319,6 +319,10 @@
           "Key" : false,
           "Nullable" : true
         } ],
+        "OutputlinkOrderingList" : [ {
+          "link_label" : "0",
+          "link_name" : "sales_cust"
+        } ],
         "InputlinkOrderingList" : [ {
           "link_label" : "Left",
           "link_name" : "stgSales"
@@ -399,7 +403,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "undefined"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "sales_cust",
@@ -464,7 +468,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "undefined"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "StgProducts",
@@ -781,79 +785,6 @@
       }
     }, {
       "outputs" : [ {
-        "id" : "3db049f3-fdb0-4225-81b4-771d3e6d2fae",
-        "app_data" : {
-          "datastage" : {
-            "is_source_of_link" : "2e97ceea-1584-4b0a-9688-0ec431c81a45"
-          },
-          "ui_data" : {
-            "label" : "outPort",
-            "cardinality" : {
-              "min" : 0,
-              "max" : 2
-            }
-          },
-          "additionalProperties" : {
-            "enableAcp" : true
-          }
-        },
-        "schema_ref" : "3ef01839-607d-4165-a037-b6ca6e18c4da",
-        "parameters" : {
-          "final_delim" : "end",
-          "file_location" : "file_system",
-          "outputName" : "stgSales",
-          "firstLineColumnNames" : "firstLineColumnNames",
-          "data_asset_id" : "517e67ff-6696-4d23-8849-03eb0ee9e3dd",
-          "buf_mode" : "default",
-          "read_file_as_one_column" : false,
-          "keepPartitions" : " ",
-          "enableSchemalessDesign" : false,
-          "file +" : [ "/px-storage/PXRuntime/Projects/139b5616-4fb4-43d5-ba2d-7aa2aba26be6/StgSales_20240901-20240930_2K.csv" ],
-          "rejects" : "continue",
-          "quote" : "none",
-          "selection" : "file",
-          "connection_asset_id" : "",
-          "missingFile" : " ",
-          "reportProgress" : "yes",
-          "file_format" : "sequential",
-          "delim" : "','",
-          "columnNameCheck" : false
-        }
-      } ],
-      "op" : "PxSequentialFile",
-      "inputs" : [ {
-        "id" : "",
-        "app_data" : {
-          "ui_data" : {
-            "label" : "inPort",
-            "cardinality" : {
-              "min" : 0,
-              "max" : 1
-            }
-          }
-        }
-      } ],
-      "id" : "2d7f601c-2b07-46d1-97d4-0243c47a68a4",
-      "type" : "binding",
-      "app_data" : {
-        "ui_data" : {
-          "image" : "/data-intg/flows/graphics/palette/PxSequentialFile.svg",
-          "x_pos" : 110.88,
-          "label" : "StgSales_2024090120240930_2Kcsv_4",
-          "y_pos" : 364.32
-        }
-      },
-      "parameters" : {
-        "combinability" : "auto",
-        "output_count" : 1,
-        "nls_map_name" : "UTF-8",
-        "input_count" : 0,
-        "execmode" : "default_seq",
-        "preserve" : -1,
-        "allow_column_mapping" : false
-      }
-    }, {
-      "outputs" : [ {
         "id" : "3cb5bb9b-b488-45f1-a11d-7111b7ab1b21",
         "app_data" : {
           "datastage" : {
@@ -881,7 +812,7 @@
           "read_file_as_one_column" : false,
           "keepPartitions" : " ",
           "enableSchemalessDesign" : false,
-          "file +" : [ "/px-storage/PXRuntime/Projects/139b5616-4fb4-43d5-ba2d-7aa2aba26be6/StgCustomer_20K.csv" ],
+          "file +" : [ "/px-storage/PXRuntime/Projects/2737676d-8c6e-4be2-a2d7-10ea1e246c5a/StgCustomer_20K.csv" ],
           "rejects" : "continue",
           "quote" : "none",
           "selection" : "file",
@@ -947,14 +878,13 @@
         "parameters" : {
           "final_delim" : "end",
           "file_location" : "file_system",
-          "outputName" : "StgProducts",
           "firstLineColumnNames" : "firstLineColumnNames",
           "data_asset_id" : "1c59f084-9f8f-48c7-b531-08eec1ba9e6d",
           "buf_mode" : "default",
           "read_file_as_one_column" : false,
           "keepPartitions" : " ",
           "enableSchemalessDesign" : false,
-          "file +" : [ "/px-storage/PXRuntime/Projects/139b5616-4fb4-43d5-ba2d-7aa2aba26be6/StgProduct_50.csv" ],
+          "file +" : [ "/px-storage/PXRuntime/Projects/2737676d-8c6e-4be2-a2d7-10ea1e246c5a/StgProduct_50.csv" ],
           "rejects" : "continue",
           "quote" : "none",
           "selection" : "file",
@@ -962,8 +892,8 @@
           "missingFile" : " ",
           "reportProgress" : "yes",
           "file_format" : "sequential",
-          "delim" : "','",
-          "columnNameCheck" : false
+          "columnNameCheck" : false,
+          "delim" : "','"
         }
       } ],
       "op" : "PxSequentialFile",
@@ -1045,7 +975,7 @@
                 "y_pos" : -20,
                 "height" : 20
               } ],
-              "class_name" : "undefined"
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "sales_cust_prod",
@@ -1067,8 +997,9 @@
         }
       } ],
       "connection" : {
-        "ref" : "89fe9d3a-7d93-484e-86d7-8e750293ec91",
-        "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+        "ref" : "35b4f023-4f1a-45f8-b6e5-abca782b2c8c",
+        "project_ref" : "2737676d-8c6e-4be2-a2d7-10ea1e246c5a",
+        "name" : "S3DataConnection",
         "properties" : {
           "_java._heap_size" : 256,
           "currentOutputLinkType" : "PRIMARY",
@@ -1092,8 +1023,7 @@
           "node_count" : 1,
           "file_format" : "csv",
           "registerDataAsset" : false
-        },
-        "name" : "S3DataConnection"
+        }
       },
       "id" : "a8833b16-cd37-4a9a-8174-9769ebad781b",
       "type" : "binding",
@@ -1448,6 +1378,137 @@
         "input_count" : 1,
         "execmode" : "default_par"
       }
+    }, {
+      "outputs" : [ {
+        "id" : "3c300bd5-5d86-48ee-a608-f58c9282800f",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "2e97ceea-1584-4b0a-9688-0ec431c81a45"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "3ef01839-607d-4165-a037-b6ca6e18c4da",
+        "parameters" : {
+          "final_delim" : "end",
+          "null_field_sep_flag" : false,
+          "firstLineColumnNames" : "firstLineColumnNames",
+          "data_asset_id" : "e06049a7-580b-4778-8005-3ae0e428325b",
+          "buf_mode" : "default",
+          "keepPartitions" : " ",
+          "file +" : [ "/px-storage/PXRuntime/Projects/2737676d-8c6e-4be2-a2d7-10ea1e246c5a/StgSales_20240901-20240930_2K.csv" ],
+          "rejects" : "continue",
+          "quote" : "none",
+          "selection" : "file",
+          "execmode" : "default_seq",
+          "missingFile" : " ",
+          "reportProgress" : "yes",
+          "delim" : "','"
+        }
+      } ],
+      "op" : "PxSequentialFile",
+      "id" : "7b29d47c-0828-4db9-88f5-6986e9b65980",
+      "type" : "binding",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxSequentialFile.svg",
+          "x_pos" : 110.88,
+          "label" : "StgSales_2024090120240930_2Kcsv_1",
+          "y_pos" : 364.32
+        }
+      },
+      "parameters" : {
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "default_seq",
+        "outputcolProperties" : [ {
+          "ColumnName" : "salesid",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : true,
+          "Nullable_check" : true,
+          "DataType" : "INTEGER",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "customerid",
+          "Description" : " ",
+          "Length" : 1024,
+          "Signed" : false,
+          "Nullable_check" : true,
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "productcode",
+          "Description" : " ",
+          "Length" : 1024,
+          "Signed" : false,
+          "Nullable_check" : true,
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "quantitysold",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : true,
+          "Nullable_check" : true,
+          "DataType" : "INTEGER",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "costofsale",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : true,
+          "Nullable_check" : true,
+          "DataType" : "DOUBLE",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "salesamount",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : true,
+          "Nullable_check" : true,
+          "DataType" : "DOUBLE",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "salesdate",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : false,
+          "Nullable_check" : true,
+          "DataType" : "DATE",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "currency",
+          "Description" : " ",
+          "Length" : 1024,
+          "Signed" : false,
+          "Nullable_check" : true,
+          "DataType" : "VARCHAR",
+          "Scale" : 0,
+          "Key" : false
+        }, {
+          "ColumnName" : "extracteddate",
+          "Description" : " ",
+          "Length" : -1,
+          "Signed" : false,
+          "Nullable_check" : true,
+          "DataType" : "DATE",
+          "Scale" : 0,
+          "Key" : false
+        } ]
+      }
     } ],
     "description" : "",
     "id" : "dd60c677-75f9-4844-a6f4-74bca36cfda4",
@@ -1463,8 +1524,8 @@
     "runtime_ref" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "eb5af3da-91ac-4b93-8501-da9b300985a2",
-    "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+    "ref" : "a1afc482-292e-4123-9f47-08f31f60aef9",
+    "project_ref" : "2737676d-8c6e-4be2-a2d7-10ea1e246c5a",
     "name" : "S3Datastorage",
     "description" : "s3 datastorage directory paths"
   } ],
@@ -2946,6 +3007,7 @@
         "label" : "Generate nested SQL",
         "value" : "NESTED_QUERY"
       },
+      "saveChangeFrequency" : "apply_changes_temporarily",
       "disableParamsCacheOnFlow" : false,
       "rcpLinkList" : [ ],
       "globalAcp" : true,

@@ -327,8 +327,9 @@
       } ],
       "op" : "generics3",
       "connection" : {
-        "ref" : "89fe9d3a-7d93-484e-86d7-8e750293ec91",
-        "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+        "ref" : "35b4f023-4f1a-45f8-b6e5-abca782b2c8c",
+        "project_ref" : "2737676d-8c6e-4be2-a2d7-10ea1e246c5a",
+        "name" : "S3DataConnection",
         "properties" : {
           "_java._heap_size" : 256,
           "currentOutputLinkType" : "PRIMARY",
@@ -352,8 +353,7 @@
           "escape_character" : "none",
           "invalid_data_handling" : "fail",
           "file_format" : "csv"
-        },
-        "name" : "S3DataConnection"
+        }
       },
       "id" : "b72b6d6c-c400-4d17-a9e8-c68ba2b5dd1b",
       "type" : "binding",
@@ -439,8 +439,9 @@
         "parameters" : { }
       } ],
       "connection" : {
-        "ref" : "89fe9d3a-7d93-484e-86d7-8e750293ec91",
-        "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+        "ref" : "35b4f023-4f1a-45f8-b6e5-abca782b2c8c",
+        "project_ref" : "2737676d-8c6e-4be2-a2d7-10ea1e246c5a",
+        "name" : "S3DataConnection",
         "properties" : {
           "_java._heap_size" : 256,
           "currentOutputLinkType" : "PRIMARY",
@@ -464,8 +465,7 @@
           "node_count" : 1,
           "file_format" : "csv",
           "registerDataAsset" : false
-        },
-        "name" : "S3DataConnection"
+        }
       },
       "id" : "90d63d3d-d5df-40a5-a8ad-57d9201ba26d",
       "type" : "binding",
@@ -541,8 +541,8 @@
     "runtime_ref" : "pxOsh"
   } ],
   "external_paramsets" : [ {
-    "ref" : "eb5af3da-91ac-4b93-8501-da9b300985a2",
-    "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+    "ref" : "a1afc482-292e-4123-9f47-08f31f60aef9",
+    "project_ref" : "2737676d-8c6e-4be2-a2d7-10ea1e246c5a",
     "name" : "S3Datastorage",
     "description" : "s3 datastorage directory paths"
   } ],
@@ -1685,6 +1685,7 @@
         "label" : "Generate nested SQL",
         "value" : "NESTED_QUERY"
       },
+      "saveChangeFrequency" : "apply_changes_temporarily",
       "disableParamsCacheOnFlow" : false,
       "rcpLinkList" : [ ],
       "globalAcp" : true,

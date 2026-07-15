@@ -9,28 +9,28 @@
       "description" : "",
       "type" : "string",
       "prompt" : "Dataset Directory",
-      "value" : "data/dev/dataset"
+      "value" : "data/mcix-github-tutorial/dev/dataset"
     }, {
       "subtype" : "",
       "name" : "LandingDir",
       "description" : "",
       "type" : "string",
       "prompt" : "Landing Directory",
-      "value" : "data/dev/file"
+      "value" : "data/mcix-github-tutorial/dev/file"
     }, {
       "subtype" : "",
       "name" : "ReportDir",
       "description" : "",
       "type" : "string",
       "prompt" : "Report Directory",
-      "value" : "data/dev/report"
+      "value" : "data/mcix-github-tutorial/dev/report"
     }, {
       "subtype" : "",
       "name" : "RejectDir",
       "description" : "",
       "type" : "string",
       "prompt" : "Reject Directory",
-      "value" : "data/dev/reject"
+      "value" : "data/mcix-github-tutorial/dev/reject"
     } ]
   }
 }

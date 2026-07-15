@@ -1,17 +1,18 @@
 {
   "metadata" : {
-    "name" : "GroupedSales.DataStage job",
-    "asset_id" : "48e63ff4-1913-4c0a-8b68-5f0b9685ff42",
+    "name" : "CreateSalesSummary.DataStage job",
+    "asset_id" : "a82624e5-76cb-444b-8648-1f113f5fcae0",
     "owner_id" : "1000331062",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref" : "b16ae575-48bf-49bd-a4b5-5e33c3307a22",
+      "asset_ref" : "ecd9c710-455f-4ab7-bfb3-e9b9773f15f8",
       "schedule_id" : "",
       "project_name" : "mcix-github-tutorial",
       "configuration" : {
-        "env_type" : "",
+        "env_id" : "f17855e7-c566-45ed-995b-93c2af686296",
+        "env_type" : "datastage",
         "flow_limits" : {
           "warn_limit" : 100
         },
@@ -20,19 +21,17 @@
       },
       "last_run_time" : "deprecated field",
       "asset_ref_type" : "data_intg_flow",
-      "job_parameters" : [ ],
       "parameter_sets" : [ {
         "ref" : "a1afc482-292e-4123-9f47-08f31f60aef9",
         "name" : "S3Datastorage"
       } ],
       "last_run_status" : "deprecated field",
-      "retention_policy" : { },
       "last_run_initiator" : "deprecated field",
       "schedule_creator_id" : "",
       "enable_notifications" : true,
       "future_scheduled_runs" : [ ],
       "last_run_status_timestamp" : 0,
-      "flow_name" : "GroupedSales"
+      "flow_name" : "CreateSalesSummary"
     }
   }
 }

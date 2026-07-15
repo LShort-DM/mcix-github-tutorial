@@ -1,18 +1,17 @@
 {
   "metadata" : {
     "name" : "SalesSummary_copy.DataStage job",
-    "asset_id" : "6db64d9a-45fd-43c3-b8d4-b896b7f50f23",
+    "asset_id" : "0d9de10c-2976-4685-944c-02bdf3bcc062",
     "owner_id" : "1000331062",
     "version" : 0
   },
   "entity" : {
     "job" : {
-      "asset_ref" : "d899eef2-bb0c-420b-9b1d-1936cfed2aba",
+      "asset_ref" : "ecd9c710-455f-4ab7-bfb3-e9b9773f15f8",
       "schedule_id" : "",
-      "project_name" : "mcix-cli-demo-2",
+      "project_name" : "mcix-github-tutorial",
       "configuration" : {
-        "env_id" : "d9bd349d-e856-4298-827b-0619e93651ae",
-        "env_type" : "datastage",
+        "env_type" : "",
         "flow_limits" : {
           "warn_limit" : 100
         },
@@ -23,7 +22,7 @@
       "asset_ref_type" : "data_intg_flow",
       "job_parameters" : [ ],
       "parameter_sets" : [ {
-        "ref" : "eb5af3da-91ac-4b93-8501-da9b300985a2",
+        "ref" : "a1afc482-292e-4123-9f47-08f31f60aef9",
         "name" : "S3Datastorage"
       } ],
       "last_run_status" : "deprecated field",

@@ -1,0 +1,12 @@
+datastage
+export
+-url
+https://cpd-dm.apps.stabledev1.dm-dev-cpd.mettleci.cloud
+-project
+mcix-github-tutorial
+-user
+lance
+-api-key
+3iOnnwouLwXKY15tX9eFP13RfDhLtYqaoL8mpB6D
+-export-path
+/Users/lanceshort/GitHubRepos/mcix-github-tutorial/datastage

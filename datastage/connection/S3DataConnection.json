@@ -2409,6 +2409,7 @@
   },
   "datasource_type" : "38714ac2-8f66-4a8c-9b40-806ffb61c759",
   "name" : "S3DataConnection",
+  "flags" : [ "parameterized" ],
   "rov" : {
     "mode" : 0,
     "member_roles" : {
@@ -2429,6 +2430,5 @@
     "region" : "ap-southeast-2",
     "url" : "https://s3.ap-southeast-2.amazonaws.com"
   },
-  "data_source_definition_searchable" : "s3.ap-southeast-2.amazonaws.com|443|cp4d-s3-mettleci ",
   "origin_country" : "us"
 }

@@ -1,6 +1,6 @@
 {
-  DatasetDir:   "data/ci/dataset",
-  LandingDir:   "data/ci/file",
-  ReportDir:    "data/ci/report",
-  RejectDir:    "data/ci/reject",
+  DatasetDir:   "data/mcix-github-tutorial/ci/dataset",
+  LandingDir:   "data/mcix-github-tutorial/ci/file",
+  ReportDir:    "data/mcix-github-tutorial/ci/report",
+  RejectDir:    "data/mcix-github-tutorial/ci/reject",
 }
