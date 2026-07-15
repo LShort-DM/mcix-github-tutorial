@@ -1,0 +1,17 @@
+name: MCIX CI Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mcix-system-version:
+    name: Verify MCIX runtime
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Run MCIX System Version
+        uses: MettleCI/mcix-system-version@v1
+
