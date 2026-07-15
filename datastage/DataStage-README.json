@@ -1,0 +1,74 @@
+{
+  "project_name" : "mcix-cli-demo",
+  "project_id" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+  "created_by" : "lance",
+  "environment" : "cp4d",
+  "services_info" : [ {
+    "name" : "ds-canvas",
+    "version" : "530.0.21"
+  }, {
+    "name" : "ds-cas-lite",
+    "version" : "530.0.5"
+  }, {
+    "name" : "ds-codegen",
+    "version" : "530.0.21"
+  }, {
+    "name" : "ds-flow-runtime",
+    "version" : "530.0.8"
+  }, {
+    "name" : "ds-flows",
+    "version" : "530.0.21"
+  }, {
+    "name" : "ds-migration",
+    "version" : "530.0.9"
+  }, {
+    "name" : "ds-px-runtime",
+    "version" : "530.0.33"
+  }, {
+    "name" : "DSAssets",
+    "version" : "530.0.5"
+  }, {
+    "name" : "qs-ruleset",
+    "version" : "530.0.5"
+  } ],
+  "assets" : [ {
+    "name" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6-DataStage_settings",
+    "type" : "data_intg_project_settings"
+  }, {
+    "name" : "CreateSalesSummary",
+    "type" : "data_intg_flow"
+  }, {
+    "location" : "CreateSalesSummary",
+    "name" : "CreateSalesSummary",
+    "type" : "px_executables"
+  }, {
+    "name" : "default_datastage_px",
+    "type" : "environment"
+  }, {
+    "name" : "GroupedSales",
+    "type" : "data_intg_flow"
+  }, {
+    "name" : "GroupedSales",
+    "type" : "data_intg_test_case"
+  }, {
+    "location" : "GroupedSales",
+    "name" : "GroupedSales",
+    "type" : "px_executables"
+  }, {
+    "name" : "GroupedSales.DataStage job",
+    "type" : "job"
+  }, {
+    "name" : "S3DataConnection",
+    "type" : "connection"
+  }, {
+    "name" : "S3Datastorage",
+    "type" : "parameter_set"
+  }, {
+    "name" : "salessummary",
+    "type" : "data_definition"
+  }, {
+    "name" : "SalesSummary_copy.DataStage job",
+    "type" : "job"
+  } ],
+  "flow_job_mapping" : [ ]
+}

@@ -1,0 +1,13 @@
+datastage
+import
+-url
+https://cpd-dm.apps.stabledev1.dm-dev-cpd.mettleci.cloud
+-assets
+/Users/lanceshort/MyRepos/mcix-github-tutorial/datastage
+-project
+mcix-github-tutorial
+-user
+lance
+-api-key
+3iOnnwouLwXKY15tX9eFP13RfDhLtYqaoL8mpB6D
+

@@ -1,0 +1,36 @@
+{
+  "parameter_set" : {
+    "value_sets" : [ ],
+    "name" : "S3Datastorage",
+    "description" : "s3 datastorage directory paths",
+    "parameters" : [ {
+      "subtype" : "",
+      "name" : "DatasetDir",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "Dataset Directory",
+      "value" : "data/dev/dataset"
+    }, {
+      "subtype" : "",
+      "name" : "LandingDir",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "Landing Directory",
+      "value" : "data/dev/file"
+    }, {
+      "subtype" : "",
+      "name" : "ReportDir",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "Report Directory",
+      "value" : "data/dev/report"
+    }, {
+      "subtype" : "",
+      "name" : "RejectDir",
+      "description" : "",
+      "type" : "string",
+      "prompt" : "Reject Directory",
+      "value" : "data/dev/reject"
+    } ]
+  }
+}

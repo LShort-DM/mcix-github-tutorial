@@ -1,0 +1,39 @@
+{
+  "metadata" : {
+    "name" : "SalesSummary_copy.DataStage job",
+    "asset_id" : "6db64d9a-45fd-43c3-b8d4-b896b7f50f23",
+    "owner_id" : "1000331062",
+    "version" : 0
+  },
+  "entity" : {
+    "job" : {
+      "asset_ref" : "d899eef2-bb0c-420b-9b1d-1936cfed2aba",
+      "schedule_id" : "",
+      "project_name" : "mcix-cli-demo-2",
+      "configuration" : {
+        "env_id" : "d9bd349d-e856-4298-827b-0619e93651ae",
+        "env_type" : "datastage",
+        "flow_limits" : {
+          "warn_limit" : 100
+        },
+        "env_variables" : [ ],
+        "runPriorityQueue" : "Medium"
+      },
+      "last_run_time" : "deprecated field",
+      "asset_ref_type" : "data_intg_flow",
+      "job_parameters" : [ ],
+      "parameter_sets" : [ {
+        "ref" : "eb5af3da-91ac-4b93-8501-da9b300985a2",
+        "name" : "S3Datastorage"
+      } ],
+      "last_run_status" : "deprecated field",
+      "retention_policy" : { },
+      "last_run_initiator" : "deprecated field",
+      "schedule_creator_id" : "",
+      "enable_notifications" : true,
+      "future_scheduled_runs" : [ ],
+      "last_run_status_timestamp" : 0,
+      "flow_name" : "CreateSalesSummary"
+    }
+  }
+}

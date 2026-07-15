@@ -1,0 +1,728 @@
+{
+  "metadata" : {
+    "name" : "salessummary",
+    "asset_type" : "data_definition",
+    "description" : "definition of salessummary csv"
+  },
+  "entity" : {
+    "data_asset" : {
+      "mime_type" : "application/json",
+      "dataset" : true,
+      "columns" : [ {
+        "name" : "salesid",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "INTEGER"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "customerid",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : true,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "quantitysold",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "INTEGER"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "costofsale",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "DOUBLE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "salesamount",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "DOUBLE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "salesdate",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "DATE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "currency",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "firstname",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "lastname",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "email",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "phone",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "address",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "city",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "state",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "zipcode",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "INTEGER"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "sourcesystem",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "productcode",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : true,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "productname",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "category",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "price",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "DOUBLE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "costbasepercentage",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "DOUBLE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "cost",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "DOUBLE"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "inventoryquantity",
+        "type" : {
+          "nullable" : true,
+          "scale" : 0,
+          "signed" : true,
+          "type" : "INTEGER"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      }, {
+        "name" : "supplierid",
+        "type" : {
+          "nullable" : true,
+          "length" : 1024,
+          "scale" : 0,
+          "signed" : false,
+          "type" : "VARCHAR"
+        },
+        "properties" : {
+          "sqltype" : 1,
+          "key_position" : 1,
+          "field_pos" : 1,
+          "extended_precision" : 0,
+          "tagged_subrec" : 0,
+          "ds_data_type" : "WSMQ.QUEUENAME",
+          "description" : "",
+          "occurs" : 0,
+          "occurs_varying" : 0,
+          "primary_key" : false,
+          "level_no" : 0,
+          "extended" : "",
+          "ds_sync_indicator" : 0,
+          "pad_char" : "",
+          "data_element" : "null",
+          "time_scale" : 0,
+          "ds_scd_purpose" : 0,
+          "sign_option" : 0,
+          "display_size" : 0
+        }
+      } ],
+      "additionalProperties" : { }
+    },
+    "column_info" : { },
+    "data_definition" : { },
+    "ds_info" : { }
+  }
+}

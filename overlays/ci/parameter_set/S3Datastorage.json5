@@ -1,0 +1,6 @@
+{
+  DatasetDir:   "data/ci/dataset",
+  LandingDir:   "data/ci/file",
+  ReportDir:    "data/ci/report",
+  RejectDir:    "data/ci/reject",
+}

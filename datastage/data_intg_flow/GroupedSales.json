@@ -1,0 +1,1701 @@
+{
+  "primary_pipeline" : "5451d381-d35f-4b01-98fc-2f22ab203b74",
+  "pipelines" : [ {
+    "nodes" : [ {
+      "outputs" : [ {
+        "id" : "7c3081db-a84a-4b14-8dac-7744f6b0c383",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "b9b32a8d-72dd-457b-8c94-af29b7c455a0"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "8ca51f5c-64c4-4407-b123-0ac615c1b0a7",
+        "parameters" : {
+          "valueDerivation" : [ {
+            "parsedExpression" : "Sum(salessummary.quantitysold)",
+            "columnName" : "QUANTITYSOLD_SUM",
+            "sourceColumn" : "salessummary.QUANTITYSOLD_SUM"
+          } ],
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "PxAggregator",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "b72b6d6c-c400-4d17-a9e8-c68ba2b5dd1b",
+          "type_attr" : "PRIMARY",
+          "id" : "c7c01dcb-f663-4c0b-85a7-327be8469160",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_single_line" : true,
+                "label_align" : "center",
+                "tooltip" : "salessummary",
+                "x_pos" : 0,
+                "label" : "salessummary",
+                "label_allow_return_key" : "save",
+                "width" : 186,
+                "label_editable" : true,
+                "id" : "dec-8",
+                "position" : "middle",
+                "y_pos" : -20,
+                "height" : 20
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "salessummary",
+          "port_id_ref" : "fe748d4e-6928-4c00-a25c-735b0d154015"
+        } ],
+        "id" : "37770d4e-ee1c-4863-9616-a6fd9fa165de",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "4124656d-b398-49fd-8f4a-6a81cfb09b06",
+        "parameters" : {
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "a85de7c9-a627-4615-bba5-d7190ecf128f",
+      "type" : "execution_node",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxAggregator.svg",
+          "x_pos" : 443.52,
+          "label" : "Aggregator_1",
+          "y_pos" : 348.48
+        }
+      },
+      "parameters" : {
+        "showPartType" : true,
+        "keyProperties" : [ {
+          "key" : "state"
+        }, {
+          "key" : "productcode"
+        } ],
+        "method" : "hash",
+        "showCollType" : false,
+        "enableSchemalessDesign" : false,
+        "preserve" : -2,
+        "reduceProperties" : [ [ {
+          "reduce" : "quantitysold"
+        }, {
+          "sum" : "QUANTITYSOLD_SUM",
+          "decimal" : ""
+        } ] ],
+        "inputName" : "salessummary",
+        "showSortOptions" : false,
+        "combinability" : "auto",
+        "inputcolProperties" : [ ],
+        "selection" : "reduce",
+        "nul_res" : " ",
+        "output_count" : 1,
+        "execmode" : "default_par",
+        "input_count" : 1
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "8371784b-9e31-481d-8bc5-b960760fc7bc",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "19acf890-5fe5-4365-9108-76e2669b8e7a"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "30516881-e9b2-4caa-8513-f1fe60af44ff",
+        "parameters" : {
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "PxSort",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "a85de7c9-a627-4615-bba5-d7190ecf128f",
+          "type_attr" : "PRIMARY",
+          "id" : "b9b32a8d-72dd-457b-8c94-af29b7c455a0",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_single_line" : true,
+                "label_align" : "center",
+                "tooltip" : "productbystate",
+                "x_pos" : 0,
+                "label" : "productbystate",
+                "label_allow_return_key" : "save",
+                "width" : 186,
+                "label_editable" : true,
+                "id" : "dec-8",
+                "position" : "middle",
+                "y_pos" : -20,
+                "height" : 20
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "productbystate",
+          "port_id_ref" : "7c3081db-a84a-4b14-8dac-7744f6b0c383"
+        } ],
+        "id" : "2936b2c2-6756-4196-ba07-c1a9ffdd08ba",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 1,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "8ca51f5c-64c4-4407-b123-0ac615c1b0a7",
+        "parameters" : {
+          "runtime_column_propagation" : 0
+        }
+      } ],
+      "id" : "2ec86234-fb1a-4d5b-9e7a-bca60bf728ea",
+      "type" : "execution_node",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/PxSort.svg",
+          "x_pos" : 776.16,
+          "label" : "Sort_1",
+          "y_pos" : 348.48
+        }
+      },
+      "parameters" : {
+        "showPartType" : true,
+        "keyProperties" : [ {
+          "sorted-clustered" : " ",
+          "asc-desc" : "asc",
+          "key" : "STATE"
+        } ],
+        "showCollType" : false,
+        "enableSchemalessDesign" : false,
+        "preserve" : -2,
+        "operator" : "tsort",
+        "inputName" : "productbystate",
+        "showSortOptions" : false,
+        "combinability" : "auto",
+        "inputcolProperties" : [ {
+          "Unicode" : false,
+          "Description" : " ",
+          "Signed" : false,
+          "Metadata" : "VARCHAR(1024), Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "STATE",
+          "TempOldColumnName" : "STATE",
+          "ColumnName" : "STATE",
+          "Length" : 1024,
+          "MisFieldProperties" : "",
+          "DataType" : "VARCHAR",
+          "Key" : false,
+          "Nullable" : true
+        }, {
+          "Unicode" : false,
+          "Description" : " ",
+          "Signed" : false,
+          "Metadata" : "VARCHAR(1024), Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "PRODUCT",
+          "TempOldColumnName" : "PRODUCT",
+          "ColumnName" : "PRODUCT",
+          "Length" : 1024,
+          "MisFieldProperties" : "",
+          "DataType" : "VARCHAR",
+          "Key" : false,
+          "Nullable" : true
+        }, {
+          "Unicode" : false,
+          "Description" : " ",
+          "Signed" : false,
+          "Metadata" : "DOUBLE, Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "QUANTITYSOLD_SUM",
+          "TempOldColumnName" : "QUANTITYSOLD_SUM",
+          "ColumnName" : "QUANTITYSOLD_SUM",
+          "Length" : "–",
+          "MisFieldProperties" : "",
+          "DataType" : "DOUBLE",
+          "Key" : false,
+          "Nullable" : true
+        } ],
+        "stats" : " ",
+        "output_count" : 1,
+        "stable" : "stable",
+        "execmode" : "default_par",
+        "input_count" : 1,
+        "unique" : " ",
+        "flagCluster" : " ",
+        "flagKey" : " "
+      }
+    }, {
+      "outputs" : [ {
+        "id" : "fe748d4e-6928-4c00-a25c-735b0d154015",
+        "app_data" : {
+          "datastage" : {
+            "is_source_of_link" : "c7c01dcb-f663-4c0b-85a7-327be8469160"
+          },
+          "ui_data" : {
+            "label" : "outPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          },
+          "additionalProperties" : {
+            "enableAcp" : true
+          }
+        },
+        "schema_ref" : "4124656d-b398-49fd-8f4a-6a81cfb09b06",
+        "parameters" : {
+          "buf_mode" : "default"
+        }
+      } ],
+      "op" : "generics3",
+      "connection" : {
+        "ref" : "89fe9d3a-7d93-484e-86d7-8e750293ec91",
+        "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "currentOutputLinkType" : "PRIMARY",
+          "table_format" : "file",
+          "first_line" : 0,
+          "file_name" : "#S3Datastorage.LandingDir#/SalesSummary.csv",
+          "outputAcpShouldHide" : true,
+          "enableFlowAcpControl" : true,
+          "enableSchemalessDesign" : false,
+          "first_line_header" : false,
+          "encoding" : "utf-8",
+          "bucket" : "cp4d-s3-mettleci ",
+          "node_number" : 0,
+          "read_mode" : "read_single",
+          "decimal_rounding_mode" : "floor",
+          "default_max_string_binary_precision" : 20000,
+          "generate_unicode_columns" : false,
+          "quote_character" : "none",
+          "node_count" : 1,
+          "infer_null_as_empty_string" : false,
+          "escape_character" : "none",
+          "invalid_data_handling" : "fail",
+          "file_format" : "csv"
+        },
+        "name" : "S3DataConnection"
+      },
+      "id" : "b72b6d6c-c400-4d17-a9e8-c68ba2b5dd1b",
+      "type" : "binding",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/generics3.svg",
+          "x_pos" : 110.88,
+          "label" : "Generic_S3_1",
+          "y_pos" : 348.48
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "output_count" : 1,
+        "input_count" : 0,
+        "execmode" : "default_par",
+        "preserve" : -3
+      }
+    }, {
+      "op" : "generics3",
+      "inputs" : [ {
+        "links" : [ {
+          "node_id_ref" : "2ec86234-fb1a-4d5b-9e7a-bca60bf728ea",
+          "type_attr" : "PRIMARY",
+          "id" : "19acf890-5fe5-4365-9108-76e2669b8e7a",
+          "app_data" : {
+            "datastage" : { },
+            "ui_data" : {
+              "decorations" : [ {
+                "image" : "/data-intg/flows/graphics/flows/link-output-handle--default-selected.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 0,
+                "x_pos" : -10,
+                "id" : "dec-3",
+                "position" : "source",
+                "y_pos" : -10,
+                "class_name" : "linkStartImage"
+              }, {
+                "image" : "/data-intg/flows/graphics/flows/link-marking--auto-partitioning.svg",
+                "temporary" : false,
+                "outline" : false,
+                "distance" : 2,
+                "width" : 50,
+                "tooltip" : "Auto-partition",
+                "x_pos" : -15,
+                "id" : "dec-6R",
+                "position" : "middle",
+                "y_pos" : 4,
+                "height" : 50
+              }, {
+                "temporary" : false,
+                "label_single_line" : true,
+                "label_align" : "center",
+                "tooltip" : "sort",
+                "x_pos" : 0,
+                "label" : "sort",
+                "label_allow_return_key" : "save",
+                "width" : 130,
+                "label_editable" : true,
+                "id" : "dec-8",
+                "position" : "middle",
+                "y_pos" : -20,
+                "height" : 20
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
+            }
+          },
+          "link_name" : "sort",
+          "port_id_ref" : "8371784b-9e31-481d-8bc5-b960760fc7bc"
+        } ],
+        "id" : "9c2642f6-dd86-4f69-99d4-f1e498e1c911",
+        "app_data" : {
+          "ui_data" : {
+            "label" : "inPort",
+            "cardinality" : {
+              "min" : 0,
+              "max" : 1
+            }
+          }
+        },
+        "schema_ref" : "30516881-e9b2-4caa-8513-f1fe60af44ff",
+        "parameters" : { }
+      } ],
+      "connection" : {
+        "ref" : "89fe9d3a-7d93-484e-86d7-8e750293ec91",
+        "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+        "properties" : {
+          "_java._heap_size" : 256,
+          "currentOutputLinkType" : "PRIMARY",
+          "table_format" : "file",
+          "showPartType" : true,
+          "quote_numerics" : true,
+          "file_name" : "#S3Datastorage.ReportDir#/SalesbyProductState.csv",
+          "showCollType" : false,
+          "outputAcpShouldHide" : false,
+          "partitioned" : false,
+          "enableFlowAcpControl" : true,
+          "part_type" : "auto",
+          "first_line_header" : false,
+          "encoding" : "utf-8",
+          "inputName" : "sort",
+          "showSortOptions" : false,
+          "bucket" : "cp4d-s3-mettleci ",
+          "write_mode" : "write",
+          "node_number" : 0,
+          "create_bucket" : false,
+          "node_count" : 1,
+          "file_format" : "csv",
+          "registerDataAsset" : false
+        },
+        "name" : "S3DataConnection"
+      },
+      "id" : "90d63d3d-d5df-40a5-a8ad-57d9201ba26d",
+      "type" : "binding",
+      "app_data" : {
+        "ui_data" : {
+          "image" : "/data-intg/flows/graphics/palette/generics3.svg",
+          "x_pos" : 1029.6,
+          "label" : "Generic_S3_2",
+          "y_pos" : 348.48
+        }
+      },
+      "parameters" : {
+        "combinability" : "auto",
+        "inputcolProperties" : [ {
+          "Unicode" : false,
+          "Description" : "",
+          "Signed" : false,
+          "Metadata" : "VARCHAR(1024), Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "STATE",
+          "TempOldColumnName" : "STATE",
+          "ColumnName" : "STATE",
+          "Length" : 1024,
+          "DataType" : "VARCHAR",
+          "Key" : false,
+          "Nullable" : true
+        }, {
+          "Unicode" : false,
+          "Description" : "",
+          "Signed" : false,
+          "Metadata" : "VARCHAR(1024), Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "PRODUCT",
+          "TempOldColumnName" : "PRODUCT",
+          "ColumnName" : "PRODUCT",
+          "Length" : 1024,
+          "DataType" : "VARCHAR",
+          "Key" : false,
+          "Nullable" : true
+        }, {
+          "Unicode" : false,
+          "Description" : "",
+          "Signed" : false,
+          "Metadata" : "DOUBLE, Null",
+          "Scale" : 0,
+          "TimeScale" : 0,
+          "OldColumnName" : "QUANTITY",
+          "TempOldColumnName" : "QUANTITY",
+          "ColumnName" : "QUANTITY",
+          "Length" : "–",
+          "DataType" : "DOUBLE",
+          "Key" : false,
+          "Nullable" : true
+        } ],
+        "output_count" : 0,
+        "input_count" : 1,
+        "execmode" : "default_par"
+      }
+    } ],
+    "description" : "",
+    "id" : "5451d381-d35f-4b01-98fc-2f22ab203b74",
+    "app_data" : {
+      "datastage" : {
+        "nls_map_name" : "UTF-8",
+        "nls_locale" : "OFF"
+      },
+      "ui_data" : {
+        "comments" : [ ]
+      }
+    },
+    "runtime_ref" : "pxOsh"
+  } ],
+  "external_paramsets" : [ {
+    "ref" : "eb5af3da-91ac-4b93-8501-da9b300985a2",
+    "project_ref" : "139b5616-4fb4-43d5-ba2d-7aa2aba26be6",
+    "name" : "S3Datastorage",
+    "description" : "s3 datastorage directory paths"
+  } ],
+  "json_schema" : "https://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "schemas" : [ {
+    "id" : "370b2d07-e18b-4987-8c04-dba651c6658c",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "salesid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "customerid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "productcode",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "quantitysold",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 8,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "costofsale",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 8,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "salesamount",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "salesdate",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      },
+      "type" : "date"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "currency",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "extracteddate",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      },
+      "type" : "date"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "firstname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "lastname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "email",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "phone",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "address",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "city",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "state",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "zipcode",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "sourcesystem",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "productname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "category",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 8,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "price",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 8,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "costbasepercentage",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 8,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "cost",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 4,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "inventoryquantity",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "supplierid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    } ]
+  }, {
+    "id" : "8ca51f5c-64c4-4407-b123-0ac615c1b0a7",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "source_field_id" : "salessummary.state",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "STATE",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "source_field_id" : "salessummary.productcode",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PRODUCT",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : " ",
+        "max_length" : 6,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITYSOLD_SUM",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    } ]
+  }, {
+    "id" : "30516881-e9b2-4caa-8513-f1fe60af44ff",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 1024,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "source_field_id" : "productbystate.STATE",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "STATE",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 1024,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "source_field_id" : "productbystate.PRODUCT",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "PRODUCT",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "source_field_id" : "productbystate.QUANTITYSOLD_SUM",
+        "max_length" : 6,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "QUANTITY",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    } ]
+  }, {
+    "id" : "4124656d-b398-49fd-8f4a-6a81cfb09b06",
+    "fields" : [ {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "salesid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "customerid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "quantitysold",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "costofsale",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "salesamount",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "salesdate",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DATE",
+        "is_unicode_string" : false,
+        "type_code" : "DATE"
+      },
+      "type" : "date"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "currency",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "firstname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "lastname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "email",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "phone",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "address",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "city",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "state",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "zipcode",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "sourcesystem",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : true,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "productcode",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "productname",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "category",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "price",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "costbasepercentage",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "cost",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "DOUBLE",
+        "is_unicode_string" : false,
+        "type_code" : "DFLOAT"
+      },
+      "type" : "double"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 0,
+        "is_signed" : true
+      },
+      "nullable" : true,
+      "name" : "inventoryquantity",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "INTEGER",
+        "is_unicode_string" : false,
+        "type_code" : "INT32"
+      },
+      "type" : "integer"
+    }, {
+      "metadata" : {
+        "item_index" : 0,
+        "is_key" : false,
+        "min_length" : 0,
+        "decimal_scale" : 0,
+        "decimal_precision" : 0,
+        "description" : "",
+        "max_length" : 1024,
+        "is_signed" : false
+      },
+      "nullable" : true,
+      "name" : "supplierid",
+      "app_data" : {
+        "time_scale" : 0,
+        "odbc_type" : "VARCHAR",
+        "is_unicode_string" : false,
+        "type_code" : "STRING"
+      },
+      "type" : "string"
+    } ]
+  } ],
+  "doc_type" : "pipeline",
+  "id" : "27714071-d6f3-4858-92db-d5bf7314ce7d",
+  "app_data" : {
+    "datastage" : {
+      "timestamp_format" : "%yyyy-%mm-%dd %hh:%nn:%ss",
+      "decimal_separator" : ".",
+      "flowRunPriorityQueue" : "Medium",
+      "time_format" : "%hh:%nn:%ss",
+      "external_message_handlers" : [ ],
+      "date_format" : "%yyyy-%mm-%dd",
+      "message_handlers" : [ ],
+      "version" : "3.0.5"
+    },
+    "additionalProperties" : {
+      "transInputLinkMapper" : { },
+      "ELTDropdown" : {
+        "id" : "nesting",
+        "label" : "Generate nested SQL",
+        "value" : "NESTED_QUERY"
+      },
+      "disableParamsCacheOnFlow" : false,
+      "rcpLinkList" : [ ],
+      "globalAcp" : true,
+      "enableRCP" : false,
+      "isNewTransActive" : false,
+      "enableSchemaLessDesign" : false,
+      "runMode" : "ETL"
+    }
+  },
+  "version" : "3.0",
+  "parameters" : {
+    "local_parameters" : [ ]
+  }
+}
