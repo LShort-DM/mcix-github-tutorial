@@ -473,7 +473,7 @@
         "ui_data" : {
           "image" : "/data-intg/flows/graphics/palette/generics3.svg",
           "x_pos" : 1029.6,
-          "label" : "Generic_S3_2",
+          "label" : "SalesbyProductStateCSV",
           "y_pos" : 348.48
         }
       },
