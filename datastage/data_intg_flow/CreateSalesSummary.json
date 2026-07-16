@@ -70,7 +70,8 @@
                 "position" : "middle",
                 "y_pos" : -20,
                 "height" : 20
-              } ]
+              } ],
+              "class_name" : "linkStyle__runMetricsLinkDefaultStyle___ixW31"
             }
           },
           "link_name" : "stgSales",
@@ -807,7 +808,7 @@
           "file_location" : "file_system",
           "outputName" : "stgCustomer",
           "firstLineColumnNames" : "firstLineColumnNames",
-          "data_asset_id" : "450b4f4b-9f63-42ff-b51f-dfaa9c7d940e",
+          "data_asset_id" : "ca15da4f-bd0b-43a8-a3f4-257d37de5d30",
           "buf_mode" : "default",
           "read_file_as_one_column" : false,
           "keepPartitions" : " ",
@@ -879,7 +880,7 @@
           "final_delim" : "end",
           "file_location" : "file_system",
           "firstLineColumnNames" : "firstLineColumnNames",
-          "data_asset_id" : "1c59f084-9f8f-48c7-b531-08eec1ba9e6d",
+          "data_asset_id" : "7aef51f7-27a4-476a-8621-f8943b34d801",
           "buf_mode" : "default",
           "read_file_as_one_column" : false,
           "keepPartitions" : " ",
@@ -1031,7 +1032,7 @@
         "ui_data" : {
           "image" : "/data-intg/flows/graphics/palette/generics3.svg",
           "x_pos" : 887.04,
-          "label" : "Generic_S3_1",
+          "label" : "SalesSummaryCSV",
           "y_pos" : 364.32
         }
       },
