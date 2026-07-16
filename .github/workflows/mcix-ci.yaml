@@ -50,3 +50,10 @@ jobs:
           report: reports/unit-test-report.xml
           test-suite: mcix ci tests
           max-concurrency: 8
+
+      - name: Upload MCIX reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcix-reports
+          path: reports/
