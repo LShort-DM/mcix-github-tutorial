@@ -39,4 +39,21 @@ jobs:
           import-report: reports/import-report.xml
           compile-report: reports/compile-report.xml
 
-      
+      - name: Execute DataStage unit tests
+        id: unit-tests
+        uses: MettleCI/mcix-unit-test-execute@v0
+        with:
+          api-key: ${{ secrets.CP4D_API_KEY }}
+          url: ${{ vars.CP4D_URL }}
+          user: ${{ vars.CP4D_USER }}
+          project: ${{ vars.DATASTAGE_PROJECT }}
+          report: reports/unit-test-report.xml
+          test-suite: mcix ci tests
+          max-concurrency: 8
+
+      - name: Upload MCIX reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcix-reports
+          path: reports/

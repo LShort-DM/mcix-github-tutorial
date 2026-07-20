@@ -167,7 +167,7 @@
         "ui_data" : {
           "image" : "/data-intg/flows/graphics/palette/PxJoin.svg",
           "x_pos" : 380.15999999999997,
-          "label" : "Join_1",
+          "label" : "Join_0",
           "y_pos" : 364.32
         }
       },
@@ -500,7 +500,7 @@
         "ui_data" : {
           "image" : "/data-intg/flows/graphics/palette/PxJoin.svg",
           "x_pos" : 617.76,
-          "label" : "Join_2",
+          "label" : "Join_1",
           "y_pos" : 364.32
         }
       },
